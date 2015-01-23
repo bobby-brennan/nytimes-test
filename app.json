@@ -1,0 +1,7 @@
+{
+  "name": "NYTimes API Demo",
+  "description": "A demo of the New York Times API",
+  "repository": "https://github.com/bobby-brennan/nytimes-test",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"]
+}

@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>
+    Articles About Obama
+  </title>
+  <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="bower/jquery/dist/jquery.js"></script>
+  <script src="bower/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <script src="js/lucy-controllers.js"></script>
+
+  <script src="js/article-list.js"></script>
+
+</head>
+<body ng-app="app">
+  <a id="top"></a>
+  <div ng-include="'header.html'"></div>
+
+  <div ng-include="'articles-about-obama.html'" ng-controller="articlesAboutObamaController" ng-init="showInputs = true"></div>
+
+  <div ng-include="'footer.html'"></div>
+</body>
+</html>
