@@ -1,0 +1,27 @@
+    <div class="container" ng-controller="ArticleListController">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Search Results</h1>
+            </div>
+        </div>
+        <div ng-repeat="article in result.response.docs" ng-init="image = getBestImage(article.multimedia)">
+        <!-- /.row -->
+          <div class="row" ng-if="image">
+              <div class="col-md-5">
+                <a href="#">
+                <img class="side-image" ng-if="image" src="http://nytimes.com/{{ image }}" alt="">
+                <img class="side-image" ng-if="!image" alt=""></a>
+              </div>
+              <div class="col-md-7">
+                  <h3>{{ article.headline.main }}<h3>
+                  <h4>{{ article.headline.kicker }}</h4>
+                  <p>{{ article.abstract }}</p>
+                  <a class="btn btn-primary" href="{{ article.web_url }}">View Article <span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+          </div>
+          <hr ng-if="image">
+        </div>
+
+    </div>
